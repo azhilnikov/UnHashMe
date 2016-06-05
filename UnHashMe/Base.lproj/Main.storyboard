@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UnHashMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Generate hash for text string" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GO9-dU-Lum">
+                                <rect key="frame" x="172" y="38" width="256" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="HPf-Cs-87R"/>
+                                    <constraint firstAttribute="height" constant="24" id="dIo-3F-kpt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter text to generate hash" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jl8-XA-Ts1">
+                                <rect key="frame" x="190" y="82" width="220" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="adK-Nb-oiL"/>
+                                    <constraint firstAttribute="width" constant="220" id="oh7-3S-ZHO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ggx-3S-khK"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qcc-dz-d5W">
+                                <rect key="frame" x="190" y="136" width="220" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="BSe-oC-py7"/>
+                                    <constraint firstAttribute="height" constant="30" id="epQ-TZ-9hC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Yap-Ag-mmW"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restore text string from hash" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wY7-Kc-ttF">
+                                <rect key="frame" x="171" y="196" width="259" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="68e-ri-QYh"/>
+                                    <constraint firstAttribute="width" constant="259" id="MyD-Sn-Bdi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter hash value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="coA-ih-Q7h">
+                                <rect key="frame" x="141" y="240" width="155" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="Z7q-9Q-Cce"/>
+                                    <constraint firstAttribute="height" constant="30" id="uPG-g6-HAv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Kk2-uq-jzQ"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter string length" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eNj-sa-vSa">
+                                <rect key="frame" x="318" y="240" width="142" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ruu-pG-Crm"/>
+                                    <constraint firstAttribute="width" constant="142" id="tDg-jY-3dE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numbersAndPunctuation"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="bE5-Nq-4cr"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vob-g7-ooG">
+                                <rect key="frame" x="139" y="292" width="113" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="4hk-eD-fyr"/>
+                                    <constraint firstAttribute="height" constant="30" id="hSW-nC-E5Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Restore"/>
+                                <connections>
+                                    <action selector="restoreButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QmH-9S-RDz"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DDT-gN-vhJ">
+                                <rect key="frame" x="297" y="292" width="163" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0ga-bL-ga9"/>
+                                    <constraint firstAttribute="width" constant="163" id="347-0D-MAP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="5FU-Zu-eSX"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alphabet" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dyl-fY-gEe">
+                                <rect key="frame" x="171" y="355" width="81" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="81" id="Dqt-SY-aLd"/>
+                                    <constraint firstAttribute="height" constant="24" id="asA-RV-hJx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="acdegilmnoprstuw" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BhF-e8-7Zn">
+                                <rect key="frame" x="261" y="354" width="169" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="mq8-a1-ESU"/>
+                                    <constraint firstAttribute="width" constant="169" id="zee-uN-X75"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Tu1-BU-nPW"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="GO9-dU-Lum" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4wQ-Hu-CPr"/>
+                            <constraint firstItem="DDT-gN-vhJ" firstAttribute="leading" secondItem="Vob-g7-ooG" secondAttribute="trailing" constant="45" id="4wj-4d-uhb"/>
+                            <constraint firstItem="wY7-Kc-ttF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CI1-XK-kQQ"/>
+                            <constraint firstItem="BhF-e8-7Zn" firstAttribute="top" secondItem="DDT-gN-vhJ" secondAttribute="bottom" constant="32" id="H9b-tg-UxR"/>
+                            <constraint firstItem="Qcc-dz-d5W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ndq-9g-ICH"/>
+                            <constraint firstItem="coA-ih-Q7h" firstAttribute="top" secondItem="wY7-Kc-ttF" secondAttribute="bottom" constant="20" id="Pmp-UR-d9P"/>
+                            <constraint firstItem="Dyl-fY-gEe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-88.5" id="QNY-kE-jGR"/>
+                            <constraint firstItem="Jl8-XA-Ts1" firstAttribute="top" secondItem="GO9-dU-Lum" secondAttribute="bottom" constant="20" id="RAu-m2-TTZ"/>
+                            <constraint firstItem="Dyl-fY-gEe" firstAttribute="top" secondItem="Vob-g7-ooG" secondAttribute="bottom" constant="33" id="S17-KX-BSR"/>
+                            <constraint firstItem="eNj-sa-vSa" firstAttribute="top" secondItem="wY7-Kc-ttF" secondAttribute="bottom" constant="20" id="UQa-zd-LGF"/>
+                            <constraint firstItem="wY7-Kc-ttF" firstAttribute="top" secondItem="Qcc-dz-d5W" secondAttribute="bottom" constant="30" id="WE2-zp-rsC"/>
+                            <constraint firstItem="Vob-g7-ooG" firstAttribute="top" secondItem="coA-ih-Q7h" secondAttribute="bottom" constant="22" id="aAF-B9-Ztu"/>
+                            <constraint firstItem="eNj-sa-vSa" firstAttribute="leading" secondItem="coA-ih-Q7h" secondAttribute="trailing" constant="22" id="aqG-bP-UUW"/>
+                            <constraint firstItem="Vob-g7-ooG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-104.5" id="ayl-bu-Ahj"/>
+                            <constraint firstItem="DDT-gN-vhJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="78.5" id="crA-3g-7NR"/>
+                            <constraint firstItem="eNj-sa-vSa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="89" id="dvQ-96-IXa"/>
+                            <constraint firstItem="DDT-gN-vhJ" firstAttribute="top" secondItem="eNj-sa-vSa" secondAttribute="bottom" constant="22" id="in2-LY-QeZ"/>
+                            <constraint firstItem="BhF-e8-7Zn" firstAttribute="leading" secondItem="Dyl-fY-gEe" secondAttribute="trailing" constant="9" id="lUM-45-RwI"/>
+                            <constraint firstItem="Qcc-dz-d5W" firstAttribute="top" secondItem="Jl8-XA-Ts1" secondAttribute="bottom" constant="24" id="lut-6u-AXw"/>
+                            <constraint firstItem="BhF-e8-7Zn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="45.5" id="pls-K1-grW"/>
+                            <constraint firstItem="GO9-dU-Lum" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="18" id="s7w-T0-Xzo"/>
+                            <constraint firstItem="coA-ih-Q7h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-81.5" id="zHF-Zv-mQg"/>
+                            <constraint firstItem="Jl8-XA-Ts1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zmM-jU-gRG"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="UUG-EP-rvm" appends="YES" id="73x-ev-YVo"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="alphabetField" destination="BhF-e8-7Zn" id="Rwx-Fe-QWu"/>
+                        <outlet property="inputHashField" destination="coA-ih-Q7h" id="LL7-u3-4KO"/>
+                        <outlet property="inputStringLengthField" destination="eNj-sa-vSa" id="wiE-zh-IAA"/>
+                        <outlet property="inputTextField" destination="Jl8-XA-Ts1" id="HqC-7E-Fvr"/>
+                        <outlet property="outputHashField" destination="Qcc-dz-d5W" id="Lee-UO-BVT"/>
+                        <outlet property="outputTextField" destination="DDT-gN-vhJ" id="qhF-Q3-7Kn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="UUG-EP-rvm">
+                    <connections>
+                        <action selector="backgroundTapped:" destination="BYZ-38-t0r" id="b5a-Tn-MIk"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="228" y="-123"/>
+        </scene>
+    </scenes>
+</document>
